@@ -3,38 +3,113 @@
 <head>
     <meta charset="UTF-8" />
     <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
-    <h3>Kalkulator BMI</h3>
-    <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung dekarang di kalkulator BMI.</p>
-    <form>
-        <div>
-        Jenis kelamin <br>
-        <div>
-          <input id="lk" type="radio" name="jenis_kelamin">
-          <label for="lk">Laki-Laki</label>
-          <input id="pr" type="radio" name="jenis_kelamin">
-          <label for="pr">Perempuan</label>
-        </div>
-        Berat badan (kg) <br>
-        <div>
-            <input type="number" name="berat_badan">
-        </div>
-        Usia (tahun) <br>
-        <div>
-            <input type="number" name="usia">
-        </div>
-        Tinggi badan (cm) <br>
-        <div>
-            <input type="number" name="tinggi_badan">
-        </div>
-        <br>
-        <button>Hitung BMI</button>
-        <button>Reset</button>
-        <input type="text" name="display">
-    </div>
-    </form>
-    </div>
-<h3>Hasil</h3>
+    <header class="main-title">
+        <h1>Kalkulator BMI</h1>
+    </header>
+    <main>
+        <!--Left Content-->
+        <section class="main-content">
+            <!--Main article-->
+            <article>  
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung dekarang di kalkulator BMI.</p>
+            </article>
+
+            <!--Form-->
+            <section>
+                <form>
+                    <div>
+                        <div class="input-title">Jenis Kelamin</div>
+                        <input type="radio" id="selection-man" name="jenis-kelamin"><label for="selection-man">Laki-Laki</label>
+                        <input type="radio" id="selection-woman" name="jenis-kelamin"><label for="selection-woman">Perempuan</label>
+                    </div>
+                    <div>
+                        <label for="input-berat-badan">Berat Badan (Kg)</label>
+                        <input type="number" id="input-berat-badan">
+                    </div>
+                    <div>
+                        <label for="input-usia">Usia (th)</label>
+                        <input type="number" id="input-usia">
+                    </div>
+                    <div>
+                        <label for="input-tinggi-badan">Tinggi Badan (cm)</label>
+                        <input type="number" id="input-tinggi-badan">
+                    </div>
+                    <div>
+                        <button class="button submit" type="button" onclick="updateResult()">Hitung BMI</button>
+                        <button class="button reset">Reset</button>
+                    </div>
+                </form>
+            </section>
+
+
+            <!--Form Article-->
+            <section>
+                <header>
+                    <h2>Keunggulan Fitur</h2>
+                </header>
+                
+                <article>
+                    <p>1. Menghitung berat badan <br>
+                        2. Menentukan kategori berat badan ideal atau tidak<br>
+                        3. Mempersiapkan program penurunan berat badan</p>
+                    <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
+                    <p>Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M².</p>
+                </article>
+            </section>
+        </section>
+
+        <!-- Right Content -->
+        <section class="main-content">
+            <!--Result Article-->
+            <article>
+                <header>
+                    <h1>Hasil</h1>
+                </header>
+
+            <!--Result Content-->
+            <section class="result-section">
+                <p>Hasil Adalah:</p>
+
+                <h2 id="bmi-result"></h2>
+
+                <p>Anda Memiliki Berat Berlebih</p>
+
+                <button class="button download">Download Hasil BMI</button>
+            </section>
+
+            <!--Result Article-->
+            <article>
+                <p>Hasil BMI di antara 23 dan 25</p>
+                <p>Anda berada dalam kategori overweight atau berat badan berlebih.<br>
+                    Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan berolahraga.<br>
+                    Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.<br>
+                </p>
+                <button class="button download">Konsultasi Ahli Gizi Via Aplikasi</button>
+                <button class="button download">Registrasi Online Ahli GIzi</button>
+                <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
+
+            <!--General Information-->
+            <section class="general-information">
+                <h4>Beberapa penyakit yang berasal dari kegemukan</h4>
+                <p>Diabetes<br>
+                    Hipertensi<br>
+                    Sakit Jantung<br>
+                    Osteoarthritis</p>
+                <button class="button download" href="https://play.google.com/store/apps/details?id=com.linkdokter.halodoc.android">Konsultasi Ahli Gizi Via Aplikasi</button>
+                <a class="button download" href="https://www.halodoc.com/rumah-sakit">Registrasi Online Ahli GIzi</a>
+            </section>
+
+            <!-- Download Aplikasi -->
+            <section></section>
+
+            </article>
+        </section>
+    </main>
+
+    <script src="JS/scripts.js"></script>
 </body>
 </html>
