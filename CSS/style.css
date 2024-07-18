@@ -1,50 +1,72 @@
 /*Ini CSS*/
 
+/* style judul website */
 .main-title {
     text-align: center;
 }
 
+    /* style keseluruhan website */
 main {
     display: flex;
     justify-content: space-around;
 }
 
+/* style hasil dan penggolongan bmi */
 .main-content {
     flex: 1;
     padding: 12px;
 }
 
+/* style jenis kelamin */
 .input-title {
     font-size: 14px;
     font-weight: bold;
 }
 
+/* form input bmi */
 form {
     background-color: aliceblue;
     padding: 12px;
     border-radius: 8px;
 }
 
+/* Style untuk tombol */
 .button {
     height: 32px;
     border-radius: 8px;
     margin: 2px;
 }
 
+/* Tombol submit bmi */
 .submit {
     background-color: aquamarine;
     border: 2px solid aqua;
 }
 
+/* Tombol reset bmi */
 .reset {
     background-color: white;
     border: 2px solid aqua;
 }
-.download { 
+
+/* Tombol link registrasi rumah sakit */
+.link { 
+    display: none;
+    text-align: center;
     background-color: rgb(49, 176, 250);
     border: 2px solid rgba(1, 1, 255, 0.192);
+    border-radius: 8px;
     color: rgb(51, 25, 148)
 }
+
+/* Tombol aplikasi Halodoc */
+.dokter {
+    background-color: rgb(40, 255, 191);
+    border: 2px solid rgba(0, 67, 87, 0.192);
+    color: rgb(25, 148, 101)
+}
+
+/* Tempat input data bmi */
 input[type=number] {
     width: 100%;
     padding: 12px 20px;
@@ -55,11 +77,8 @@ input[type=number] {
     transition: 0.5s;
     outline: none;
   }
-  
-  input[type=number]:focus {
-    border: 3px solid #555;
-  }
 
+  /* Hasil BMI yang telah dihitung */
   .result-section {
     text-align: center;
     background-color: aliceblue;
@@ -67,12 +86,46 @@ input[type=number] {
     padding: 12px;
   }
 
-  .general-information {
+  /* Penyakit yang dapat disebabkan berat tubuh tidak ideal */
+  .macam-penyakit {
     text-align: center;
+    background-color: aliceblue;
+    padding: 12px;
+    border-radius: 8px;
   }
 
+  /* Tidak bisa dilihat selain di mobile */
+  /* download aplikasi mobile*/
+  .download-app {
+    display: none;
+  }
+  /* download aplikasi Halodoc mobile*/
+  .hidden-mobile {
+    display: none;
+  }
+
+  /* Hanya dapat dilihat di Mobile */
   @media only screen and (max-width: 480px) {
+    /* style keseluruhan website di mobile */
     main {
         flex-direction: column
+    }
+    /* download aplikasi Halodoc mobile*/
+    .hidden-mobile {
+        display: block;
+        text-align: center;
+        background-color: rgb(49, 176, 250);
+        border: 2px solid rgba(1, 1, 255, 0.192);
+        border-radius: 8px;
+        color: rgb(51, 25, 148)
+    }
+    /* download aplikasi mobile*/
+    .download-app {
+        display: block !important;
+        
+    }
+    /* link playstore dan appstore */
+    .store {
+        height: 32px;
     }
   }
